@@ -12,9 +12,9 @@ public class Controller implements KeyListener {
 	public static void main(String[] args) {
 		Frame f = new Frame("Demo");
 		f.setLayout(new FlowLayout());
-		f.setSize(500, 500);
+		f.setSize(500, 100);
 		Label l = new Label();
-		l.setText("This is a demonstration");
+		l.setText("Have fun playing this game! A better version will come soon.");
 		f.add(l);
 		f.setVisible(true);
 		Controller k = new Controller();

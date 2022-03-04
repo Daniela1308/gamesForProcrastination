@@ -30,10 +30,10 @@ public class Controller implements KeyListener {
 	public void gamePairRight() {
 		System.out.println("Yeah");
 		for (int i = 0; i < 4; i++) {
-			for (int j = 0; j < 3; j++) {
-				if (field[i][j] == field[i][j + 1]) {
-					field[i][j + 1] = field[i][j] * 2;
-					field[i][j] = 0;
+			for (int j = 3; j > 0; j--) {
+				if (field[i][j] == field[i][j - 1]) {
+					field[i][j] = field[i][j-1] * 2;
+					field[i][j-1] = 0;
 				}
 			}
 		}
@@ -67,10 +67,10 @@ public class Controller implements KeyListener {
 
 	public void gamePairDown() {
 		System.out.println("Yeah");
-		for (int i = 0; i < 3; i++) {
+		for (int i = 3; i > 0; i--) {
 			for (int j = 0; j < 4; j++) {
-				if (field[i][j] == field[i + 1][j]) {
-					field[i + 1][j] = field[i][j] * 2;
+				if (field[i][j] == field[i - 1][j]) {
+					field[i - 1][j] = field[i][j] * 2;
 					field[i][j] = 0;
 				}
 			}
